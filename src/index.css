@@ -1,0 +1,36 @@
+@import 'tailwindcss';
+@import './flip-cards.css';
+
+.buymeacoffee {
+  transform: translate(-120%);
+  animation:
+    buymeacoffee-load 0.8s ease-out 1s 1 forwards,
+    buymeacoffee-brightness 3s infinite;
+}
+
+@keyframes buymeacoffee-load {
+  80% {
+    transform: translate(30%);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes buymeacoffee-brightness {
+  50% {
+    filter: brightness(1.2);
+  }
+}
+
+.overflow-x-auto {
+  scrollbar-width: none;
+}
+
+h1 {
+  @apply text-4xl font-thin text-zinc-400;
+}
+
+h2 {
+  @apply text-3xl;
+}
